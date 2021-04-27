@@ -1,10 +1,10 @@
-<h1>Your Artist Search Results</h1>
+<h1>Albums for: {{albums.[0].artists.[0].name}}</h1>
   <ul>
-      {{#each artists}}
+    {{#each albums}}
         <div>
             <p>{{name}}</p>
             <img src="{{images.[0].url}}" alt"{{name}}" />
-            <a href="/albums/{{id}}">View Albums</a>
+            <a href="">View Tracks</a>
         </div>     
-      {{/each}}
+    {{/each}}
   </ul>

@@ -31,19 +31,26 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/artist-search', (req, res, next) => {
-    console.log(req.query.artist)
-    
-    spotifyApi
-        .searchArtists(req.query.artist)
+    spotifyApi.searchArtists(req.query.artist)
         .then(data => {
             const results = {
                 artists: data.body.artists.items
             }
-            console.log('Artist information: ', results.artists);
-            //res.send(results.artists)
             res.render('artist-search-results', results);
         })
-        .catch(err => console.log('The error while searching artists occurred: ', err))
+        .catch(err => console.log('The error occured while searching artists : ', err))
+
+})
+
+app.get('/albums/:artistId', (req, res, next) => {
+    spotifyApi.getArtistAlbums(req.params.artistId, { limit: 10, offset: 20 })
+        .then(data => {
+            const results = {
+                albums: data.body.items
+            }
+            res.render('albums', results)
+        })
+        .catch(err => console.log('The error occured while searching artists : ', err))
 
 })
 
