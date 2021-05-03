@@ -1,0 +1,16 @@
+<div class='flex-column'>
+    <div class='flex-row table-header'>
+        <p>Title</p>
+        <p>Listen</p>
+    </div>
+    {{#each tracks}}
+    <div class='flex-row tr'>
+        <p>{{name}}</p>
+        <p>
+            <audio controls>
+                <source src='{{preview_url}}' type='audio/mpeg'>
+            </audio>
+        </p>
+    </div>
+    {{/each}}
+</div>

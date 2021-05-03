@@ -1,0 +1,52 @@
+body {
+    font: 16px Arial;
+}
+
+/* -------------------- */
+/* FLEXBOX */
+/* -------------------- */
+
+.flex-column {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0 10px 0 20px;
+    width: 70vw;
+}
+
+
+/* -------------------- */
+/* ARTISTS */
+/* -------------------- */
+
+
+/* -------------------- */
+/* ALBUMS */
+/* -------------------- */
+
+
+/* -------------------- */
+/* TRACKS */
+/* -------------------- */
+
+.table-header {
+    color: rgba(30, 215, 96, 1); 
+    font-weight: bold;
+    font-size: 2em;
+    justify-content: space-around;
+}
+
+.table-header > p {
+    text-align: center;
+    width: 50vw;
+}
+
+.tr {background: rgba(30, 215, 96, .4);}
