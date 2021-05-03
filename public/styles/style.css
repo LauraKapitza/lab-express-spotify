@@ -1,5 +1,6 @@
 body {
     font: 16px Arial;
+    margin: 0 auto;
 }
 
 /* -------------------- */
@@ -24,9 +25,21 @@ body {
 
 
 /* -------------------- */
-/* ARTISTS */
+/* HOME */
 /* -------------------- */
 
+.hero-page {
+    align-items: center;
+    background: linear-gradient(135deg, #1db954, #191414);
+    height: 100vh;
+    justify-content: center;
+}
+
+.hero-page p {
+    color: white;
+    font-size: 4em;
+    margin: 0 0 20px;
+}
 
 /* -------------------- */
 /* ALBUMS */
